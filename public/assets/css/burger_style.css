@@ -1,0 +1,48 @@
+body{background-color: #a71021;
+color: white;}
+
+h1{color: white;
+	font-size: 100px;
+}
+
+
+h3{
+	color: black;
+}
+
+h4{
+	font-style: italic;
+}
+
+li{
+	font-size: 10px;
+}
+
+#title{
+	text-align: center;
+}
+
+#burger-input{
+	margin-top: 5%;
+	background-color: white;
+	opacity: 0.95;
+	color: black;
+	padding: 5%;
+	text-indent: 10px;
+}
+
+#avail{
+	border-bottom: dotted;
+	border-color: white;
+	border-width: 10px;
+}
+
+
+.container{
+	width: 90%;
+}
+
+.burger-pod{
+	text-align: center;
+
+}

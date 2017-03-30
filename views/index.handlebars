@@ -1,0 +1,145 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-3" >
+			<form action="/create" id="burger-input" method="POST">
+				<h3>BURGER NAME: </h3> <input type="" name="BurgerName"><br><br>
+				<h4>BUN: </h4>
+				<input value="White" name="bun" type="radio" checked> White <br>
+				<input value="WholeWheat" name="bun" type="radio"> Whole Wheat <br>
+				<input value="GlutenFree" name="bun"  type="radio"> Gluten Free <br>
+				<input value="" name="bun" type="radio"> None <br>
+
+				<h4> PATTY: </h4>
+				<input value="Beef" name="patty" type="radio" checked> Beef <br>
+				<input value="Turkey"name="patty"  type="radio"> Turkey <br>
+				<input value="Veggie" name="patty" type="radio"> Veggie <br>
+				<input value="" name="patty" type="radio"> None <br>
+
+				<h4> CHEESE: </h4>
+				<input value="American" name="cheese" type="radio" checked> American <br>
+				<input value="Cheddar" name="cheese" type="radio"> Cheddar <br>
+				<input value="Swiss" name="cheese" type="radio"> Swiss <br>
+				<input value="" name="cheese" type="radio"> None <br>
+
+				<h4> TOPPINGS: </h4>
+				<input name="Tomato" value="t" type="checkbox" > Tomato <br>
+				<input name="Lettuce" value="t" type="checkbox"> Lettuce <br>
+				<input name="Onions" value="t" type="checkbox"> Onions <br>
+				<input name="Bacon" value="t" type="checkbox"> Bacon <br>
+				<input name="Mushrooms" value="t" type="checkbox"> Mushrooms <br>
+
+				<h4> CONDIMENTS: </h4>
+				<input name="Ketchup" value="t" type="checkbox"> Ketchup <br>
+				<input name="Mustard" value="t" type="checkbox"> Mustard <br>
+				<input name="Mayo" value="t" type="checkbox"> Mayo <br>
+				<input name="SecretSauce" value="t" type="checkbox"> Secret Sauce <br>
+				<h4>SPECIAL INSTRUCTIONS: </h4> <input type="text" name="SpecialInstructions"><br><br>
+
+  				<input type="submit" class= "btn btn-lg btn-danger" value="BUILD">			
+
+
+
+
+			</form>
+		</div>
+
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-12" id="title">
+					<h1> HTML5 GUYS </h1>
+					<h2> Burgers &amp; Fries</h2>
+				</div>
+			</div>
+			<div class="row" id="avail">
+
+				<h2> AVAILABLE BURGERS </h2>
+					{{#each burgers}}
+					<div class="col-md-4" class="burger-pod">
+						<h3>{{burger_name}}</h3>
+						<h4>{{#if patty}}
+						{{patty}} Patty 
+						{{/if}}
+
+						{{#if bun}}
+						on a {{bun}} Bun
+						{{/if}}</h4>
+						<div class="row" >
+							<div class="col-md-6" >
+							<ul>
+
+								{{#if cheese}}
+								<li> {{cheese}} Cheese</li>
+								{{/if}}
+
+								{{#if tomato}}
+								<li>  Tomato</li>
+								{{/if}}
+
+								{{#if lettuce}}
+								<li>  Lettuce</li>
+								{{/if}}
+
+								{{#if onions}}
+								<li>  Onions</li>
+								{{/if}}
+
+								{{#if bacon}}
+								<li>  Bacon</li>
+								{{/if}}
+								{{#if mushrooms}}
+								<li>  Mushrooms</li>
+								{{/if}}
+							</ul>
+
+							</div>
+							
+							<div class="col-md-6">
+							<ul>
+
+
+								{{#if ketchup}}
+								<li>  Ketchup</li>
+								{{/if}}
+								
+								{{#if mustard}}
+								<li>  Mustard</li>
+								{{/if}}
+
+								{{#if mayo}}
+								<li>  Mayo</li>
+								{{/if}}
+
+								{{#if secret_sauce}}
+								<li>  Secret Sauce</li>
+								{{/if}}
+							</ul>
+							</div>
+						</div>
+
+						{{#if special_instructions}}
+						Instructions: {{special_instructions}}
+						{{/if}}
+						<br>
+						<form action="/devour?_method=PUT" method="POST">
+		  					<input type="hidden" name="burger_id" value="{{id}}">
+		  					<input type="submit" class= "btn btn-primary" value="DEVOUR">
+						</form>		
+						<br>
+					</div>
+					{{/each}}
+
+				</div>
+			<div class="row" id="eaten">
+				<h2>DEVOURED BURGERS</h2>
+
+				{{#each devoured}}
+				<div class="col-md-2">
+					<h3>{{burger_name}}</h3>	
+					<br>
+				</div>
+				{{/each}}
+			</div>
+			</div>
+		</div>
+
+	</div>
