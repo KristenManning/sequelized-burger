@@ -10,11 +10,33 @@ var mysql = require('mysql');
 
 
 router.get('/', function(req,res){
+  db.Burger.findAll({ 
+    where: {
+      devoured: true,
+    },
+  }).then(function(devoured) {
+    // send array of project objects to handlebars
+    db.Burger.findAll({ 
+      where: {
+        devoured: null,
+      },
+    }).then(function(not_devoured) {
+
+
+
+      res.render("index", {"devoured": devoured, 
+                "not_devoured": not_devoured})
+  
+    });
+  });
+});
+
+router.get('/all_not_devoured', function(req,res){
   console.log(db)
   db.Burger.findAll({ 
-    // where: {
-    //   devoured: true,
-    // },
+    where: {
+      devoured: null,
+    },
   }).then(function(result) {
     console.log(result);
     // send array of project objects to handlebars
