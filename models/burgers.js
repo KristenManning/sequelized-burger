@@ -9,82 +9,83 @@ module.exports = function(sequelize, DataTypes) {
 
   burger_name: {
     type: DataTypes.STRING,
-    allowNull: false
+    default: null
   },
 
   devoured: {
     type: DataTypes.BOOLEAN,
+    default: null
   },
 
   // date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
   // burger_name: {
   //   type: DataTypes.STRING,
-  //   allowNull: false
+  //   default: null
   // },  
  
   bun: {
     type: DataTypes.STRING,
-    allowNull: false
+    default: null
   },  
 
   patty: {
     type: DataTypes.STRING,
-    allowNull: false
+    default: null
   },  
   
   cheese: {
     type: DataTypes.STRING,
-    allowNull: false
+    default: null
   }, 
   
   tomato: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   },  
 
   lettuce: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   },  
 
   onions: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   }, 
 
   bacon: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   }, 
 
   mushrooms: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   }, 
 
   ketchup: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   }, 
 
   mustard: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   }, 
 
   mayo: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   }, 
 
   secret_sauce: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.BOOLEAN,
+    default: null
   }, 
 
   special_instructions: {
     type: DataTypes.STRING,
-    allowNull: false
+    default: null
   }
   });
 

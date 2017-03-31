@@ -2,7 +2,8 @@
 	<div class="row">
 		<div class="col-md-3" >
 			<form action="/create" id="burger-input" method="POST">
-				<h3>BURGER NAME: </h3> <input type="" name="BurgerName"><br><br>
+				<input name="devoured" type="hidden">
+				<h3>BURGER NAME: </h3> <input type="" name="burger_name"><br><br>
 				<h4>BUN: </h4>
 				<input value="White" name="bun" type="radio" checked> White <br>
 				<input value="WholeWheat" name="bun" type="radio"> Whole Wheat <br>
@@ -22,18 +23,18 @@
 				<input value="" name="cheese" type="radio"> None <br>
 
 				<h4> TOPPINGS: </h4>
-				<input name="Tomato" value="t" type="checkbox" > Tomato <br>
-				<input name="Lettuce" value="t" type="checkbox"> Lettuce <br>
-				<input name="Onions" value="t" type="checkbox"> Onions <br>
-				<input name="Bacon" value="t" type="checkbox"> Bacon <br>
-				<input name="Mushrooms" value="t" type="checkbox"> Mushrooms <br>
+				<input name="tomato" value="t" type="checkbox" > Tomato <br>
+				<input name="lettuce" value="t" type="checkbox"> Lettuce <br>
+				<input name="onions" value="t" type="checkbox"> Onions <br>
+				<input name="bacon" value="t" type="checkbox"> Bacon <br>
+				<input name="mushrooms" value="t" type="checkbox"> Mushrooms <br>
 
 				<h4> CONDIMENTS: </h4>
-				<input name="Ketchup" value="t" type="checkbox"> Ketchup <br>
-				<input name="Mustard" value="t" type="checkbox"> Mustard <br>
-				<input name="Mayo" value="t" type="checkbox"> Mayo <br>
-				<input name="SecretSauce" value="t" type="checkbox"> Secret Sauce <br>
-				<h4>SPECIAL INSTRUCTIONS: </h4> <input type="text" name="SpecialInstructions"><br><br>
+				<input name="ketchup" value="t" type="checkbox"> Ketchup <br>
+				<input name="mustard" value="t" type="checkbox"> Mustard <br>
+				<input name="mayo" value="t" type="checkbox"> Mayo <br>
+				<input name="secret_sauce" value="t" type="checkbox"> Secret Sauce <br>
+				<h4>SPECIAL INSTRUCTIONS: </h4> <input type="text" name="special_instructions"><br><br>
 
   				<input type="submit" class= "btn btn-lg btn-danger" value="BUILD">			
 
