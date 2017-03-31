@@ -8,6 +8,7 @@ h1{color: white;
 
 h3{
 	color: black;
+	background-color: white;
 }
 
 h4{
@@ -44,5 +45,7 @@ li{
 
 .burger-pod{
 	text-align: center;
-
+	border: solid;
+	margin: 1%;
+	border-color: grey;
 }

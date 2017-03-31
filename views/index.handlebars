@@ -55,19 +55,18 @@
 
 				<h2> AVAILABLE BURGERS </h2>
 					{{#each not_devoured}}
-					<div class="col-md-4" class="burger-pod">
+					<div class="col-md-3 burger-pod">
 						<h3>{{burger_name}}</h3>
 						<h4>{{#if patty}}
 						{{patty}} Patty 
 						{{/if}}
-
+						<br>
 						{{#if bun}}
-						on a {{bun}} Bun
+						{{bun}} Bun
 						{{/if}}</h4>
 						<div class="row" >
 							<div class="col-md-6" >
 							<ul>
-
 								{{#if cheese}}
 								<li> {{cheese}} Cheese</li>
 								{{/if}}
@@ -120,7 +119,7 @@
 						{{#if special_instructions}}
 						Instructions: {{special_instructions}}
 						{{/if}}
-						<br>
+						
 						<form action="/devour?_method=PUT" method="POST">
 		  					<input type="hidden" name="burger_id" value="{{id}}">
 		  					<input type="submit" class= "btn btn-primary" value="DEVOUR">
@@ -134,7 +133,7 @@
 				<h2>DEVOURED BURGERS</h2>
 
 				{{#each devoured}}
-				<div class="col-md-2">
+				<div class="col-md-4">
 					<h3>{{burger_name}}</h3>	
 					<br>
 				</div>
